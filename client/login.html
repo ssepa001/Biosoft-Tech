@@ -1,26 +1,25 @@
 <template name="login">
 <div class="container">
-  <div class="row">
-    <div class="centered-box signin">
-      <h3>Login</h3>
-      <div class="row">
-        <div class="col-md-10">
+  <div class="centered-box signin">
+    <h3>Login</h3>
+    <div class="row">
+      <div class="col-md-10">
+        <form class="form-group">
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
-            <input type="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+            <input class="form-control" type="email" name="loginEmail" Placeholder="Email" aria-describedby="basic-addon1">
           </div>
           <br>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-asterisk"></span></span>
-            <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+            <input class="form-control" type="password" name="loginPass" placeholder="Password">
           </div>
           <br> <br>
-          <button class="btn btn-primary btn-border-radius-large">SIGN IN</button>
-        </div>
+          <input class="form-control btn-primary" type="submit" name="signin" value="SIGN IN">
+        </form>
       </div>
     </div>
   </div>
 </div>
-
 
 </template>

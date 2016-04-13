@@ -13,7 +13,8 @@ Template.nav.helpers({
 });
 
 Template.nav.events({
-  "click #foo": function(event, template){
-
+  "click .logout": function(event){
+    event.preventDefault();
+    Meteor.logout();
   }
 });
