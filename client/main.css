@@ -1,1 +1,15 @@
 /* CSS declarations go here */
+.centered-box {
+  background: #fff;
+  border: 1px solid black;
+  margin: 100px auto 0 auto;
+  border-radius: 3px;
+  padding: 40px;
+}
+
+.centered-box.signin {
+  max-width: 400px;
+}
+body {
+  background-color: lightgray;
+}
