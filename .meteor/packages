@@ -25,3 +25,6 @@ accounts-password
 iron:router
 fortawesome:fontawesome
 msavin:mongol
+templates:tabs
+session
+jshint

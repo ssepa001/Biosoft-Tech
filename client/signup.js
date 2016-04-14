@@ -24,9 +24,15 @@ Template.signup.events({
     Accounts.createUser(userObject, function(err){
       if(err)
         console.log(err);
-      else
+      else{
+        Documents.insert({
+          name: 'New Doc',
+          text: 'Write here...',
+          owner: Meteor.userId(),
+        });
         console.log("Signup submitted.");
-        Router.go('/notebook')
+        Router.go('/notebook');
+      }
     });
   },
 });

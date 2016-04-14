@@ -23,7 +23,7 @@ Template.login.events({
         console.log(err);
       else
         console.log("Login submitted.");
-        Router.go('/notebook')
+        Router.go('/notebook');
 
     });
   },
