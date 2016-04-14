@@ -10,8 +10,9 @@ Template.notebook.helpers({
   tabs: function () {
     delete Session.keys['activeTab'];
     // Every tab object MUST have a name and a slug!
-    var documents = Documents.find({owner: Meteor.userId()}).fetch();
-    var tabs = [];
+    const documents = Documents.find({owner: Meteor.userId()}).fetch();
+    let tabs = [];
+
     for (let doc in documents){
       tabs.push({ name: documents[doc].name, slug: documents[doc]._id });
     }
@@ -57,7 +58,7 @@ Template.notebook.events({
     });
 
   },
-  'click .openNotes'(event) {
+  'click #openNotes'(event) {
     const text = Documents.findOne(this._id);
     $('#' + this._id).val(text.text);
   },
