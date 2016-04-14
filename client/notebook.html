@@ -1,20 +1,65 @@
 <template name="notebook">
-  <h1>Welcome to your Notebook</h1>
-  <div>
+  <div class="container">
+    <h1>Welcome to your Notebook!</h1>
+    <div class="row">
+      <div class="col-md-7">
+        <div id="createDocument">
+          Name: <input type="text" id="new-document-name" placeholder="New document" /><input type="button" id="new-document" value="create"/>
+        </div>
+        <div class="document ">
 
+        </div>
+        <div>
+          <textarea id="document-text" rows="30" cols="80"></textarea>
+        </div>
+      </div>
+      <h4>Your Notes</h4>
+
+      <div class="col-md-2">
+        <hr>
+        {{#each documents}}
+        <div class="row">
+          <div class="col-md-8">
+              <li>
+                <a href="#" class="openNotes">{{name}}</a>
+              </li>
+          </div>
+          <div class="col-md-4">
+            <input type="button" id="delete-document" value="Delete"/>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+
+    </div>
+  </div>
+
+</template>
+
+
+
+
+<template name="documentList">
+  <h1>Welcome to your Notebook!</h1>
+  <div>
   </div>
   <div id="createDocument">
-      Name: <input type="text" id="new-document-name" placeholder="New Document" /><input type="button" id="new-document" value="create"/>
+    Name: <input type="text" id="new-document-name" placeholder="New document" /><input type="button" id="new-document" value="create"/>
   </div>
-  <div class="document">
+</template>
+
+<template name="documentButton">
+  <div class="document ">
     <p>
-      <input type="button" id=edit-document value="Edit"/>
-      <input type="button" name="delete-document" value="Delete"/>
+    <input type="button" id="edit-document" value="Edit"/>
+    <input type="button" id="delete-document" value="Delete"/>
     </p>
-  </div>
-  <div>
-    <p>
-      <textarea id="docuemnt-text" rows="10" cols="80"></textarea>
-    </p>
-  </div>
+   </div>
+</template>
+
+<template name="documentView">
+    <div>
+      <p></p>
+        <textarea id="document-text" rows="30" cols="80"></textarea>
+    </div>
 </template>

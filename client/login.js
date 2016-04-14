@@ -21,8 +21,9 @@ Template.login.events({
     Meteor.loginWithPassword(email, password, function(err){
       if(err)
         console.log(err);
-      else 
+      else
         console.log("Login submitted.");
+        Router.go('/notebook')
 
     });
   },

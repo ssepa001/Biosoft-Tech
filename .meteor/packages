@@ -23,3 +23,5 @@ nemo64:bootstrap
 less
 accounts-password
 iron:router
+fortawesome:fontawesome
+msavin:mongol

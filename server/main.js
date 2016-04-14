@@ -1,5 +1,10 @@
 import { Meteor } from 'meteor/meteor';
 
-Meteor.startup(() => {
-  // code to run on server at startup
+Meteor.startup(function() {
+  if (Documents.find().count() === 0) {
+    return Documents.insert({
+      name: "Sample doc",
+      text: "Write here..."
+    });
+  }
 });

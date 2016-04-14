@@ -26,6 +26,7 @@ Template.signup.events({
         console.log(err);
       else
         console.log("Signup submitted.");
+        Router.go('/notebook')
     });
   },
 });
