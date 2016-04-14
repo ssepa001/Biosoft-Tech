@@ -53,8 +53,9 @@
         {{#tabContent slug=_id}}
           <div class="col-md-7">
             <div class="document">
-              <input type="button" id="update" value="Update"/>
+              <input type="button" class="btn btn-info" id="update" value="Update"/>
             </div>
+            <br>
             <div class="panel panel-info">
               <div class="panel-body">
                 <div>
@@ -69,9 +70,9 @@
       {{/basicTabs}}
 
       <div class="col-md-4">
-        <div id="createDocument">
-          <input type="text" id="new-doc-name" placeholder="New document Name" />
-          <input type="button" id="new-document" value="Create"/>
+        <input type="button" id="new-document" value="Create" class="btn btn-info" style="float: right"/>
+        <div style="overflow: hidden;padding-right: .5em;">
+          <input type="text" id="new-doc-name" placeholder="New document Name" class="form-control" style="width:100%;"/>
         </div>
         <br>
         <div class="panel panel-info">
@@ -79,18 +80,18 @@
             <h4>Your Notes</h4>
           </div>
           <div class="panel-body">
-            <hr>
             {{#each documents}}
             <div class="row">
 
-              <div class="col-sm-8">
+              <div class="col-sm-12">
                 <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-success" id="openNotes">{{name}}</a>
+                  <input type="button" class="btn btn-danger" id="delete-document" value="Delete" style="float:right;margin-top: 3.5px;"/>
+                  <div style="overflow: hidden;padding-right: .5em;">
+                    <a href="#" class="list-group-item list-group-item-success" id="openNotes" style="width:100%">{{name}}</a>
+                  </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <input type="button" class="btn btn-primary" id="delete-document" value="Delete"/>
-              </div>
+
 
 
             </div>
